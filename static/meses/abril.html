@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Diário da Saúde Mental - Abril</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFF9E5;
+            color: #FFCC0A;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #FF9900;
+            margin-bottom: 50px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            max-width: 1200px;
+            margin-top: 30px;
+        }
+
+        .month, .calendar {
+            background-color: #FFF5CC;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 48%;
+        }
+
+        h2 {
+            color: #FFB300; 
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .entry {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-size: 16px;
+            color: #FF9900;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #FFD700;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #FFB300;
+        }
+
+        .calendar {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #FFD700;
+            cursor: pointer;
+        }
+
+        th {
+            background-color: #FFB300;
+            color: white;
+        }
+
+        td {
+            background-color: #FFF9E5;
+        }
+
+        .selected {
+            border: 2px solid #FF9900;
+        }
+
+        .next-month {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .next-month a {
+            font-size: 18px;
+            color: #FFF;
+            background-color: #FFB300;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .next-month a:hover {
+            background-color: #FF7F00;
+        }
+
+        .green { background-color: #28a745; color: white; }
+        .yellow { background-color: #ffc107; color: white; }
+        .red { background-color: #dc3545; color: white; }
+
+        button {
+            font-size: 18px;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            width: 150px; 
+        }
+
+        .green-button {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .yellow-button {
+            background-color: #ffc107;
+            color: white;
+        }
+
+        .red-button {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Diário da Saúde Mental - Abril</h1>
+
+    <div class="container">
+        <div class="month" id="april">
+            <h2>Abril</h2>
+            <div class="entry">
+                <label for="apr-1">Semana 1:</label>
+                <input type="text" id="apr-1" placeholder="Como você se sentiu?">
+            </div>
+            <div class="entry">
+                <label for="apr-2">Semana 2:</label>
+                <input type="text" id="apr-2" placeholder="Como você se sentiu?">
+            </div>
+            <div class="entry">
+                <label for="apr-3">Semana 3:</label>
+                <input type="text" id="apr-3" placeholder="Como você se sentiu?">
+            </div>
+
+            <div class="next-month">
+                <a href="maio.html">Próximo Mês</a>
+            </div>
+        </div>
+
+        <div class="calendar">
+            <h3>Calendário de Abril 2025</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Seg</th>
+                        <th>Ter</th>
+                        <th>Qua</th>
+                        <th>Qui</th>
+                        <th>Sex</th>
+                        <th>Sáb</th>
+                        <th>Dom</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td onclick="changeColor(this)">1</td>
+                        <td onclick="changeColor(this)">2</td>
+                        <td onclick="changeColor(this)">3</td>
+                        <td onclick="changeColor(this)">4</td>
+                        <td onclick="changeColor(this)">5</td>
+                        <td onclick="changeColor(this)">6</td>
+                    </tr>
+                    <tr>
+                        <td onclick="changeColor(this)">7</td>
+                        <td onclick="changeColor(this)">8</td>
+                        <td onclick="changeColor(this)">9</td>
+                        <td onclick="changeColor(this)">10</td>
+                        <td onclick="changeColor(this)">11</td>
+                        <td onclick="changeColor(this)">12</td>
+                        <td onclick="changeColor(this)">13</td>
+                    </tr>
+                    <tr>
+                        <td onclick="changeColor(this)">14</td>
+                        <td onclick="changeColor(this)">15</td>
+                        <td onclick="changeColor(this)">16</td>
+                        <td onclick="changeColor(this)">17</td>
+                        <td onclick="changeColor(this)">18</td>
+                        <td onclick="changeColor(this)">19</td>
+                        <td onclick="changeColor(this)">20</td>
+                    </tr>
+                    <tr>
+                        <td onclick="changeColor(this)">21</td>
+                        <td onclick="changeColor(this)">22</td>
+                        <td onclick="changeColor(this)">23</td>
+                        <td onclick="changeColor(this)">24</td>
+                        <td onclick="changeColor(this)">25</td>
+                        <td onclick="changeColor(this)">26</td>
+                        <td onclick="changeColor(this)">27</td>
+                    </tr>
+                    <tr>
+                        <td onclick="changeColor(this)">28</td>
+                        <td onclick="changeColor(this)">29</td>
+                        <td onclick="changeColor(this)">30</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <button class="green-button" onclick="setColor('green')">Verde</button>
+                <button class="yellow-button" onclick="setColor('yellow')">Amarelo</button>
+                <button class="red-button" onclick="setColor('red')">Vermelho</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selectedColor = null;
+
+        function changeColor(cell) {
+            if (selectedColor) {
+                cell.classList.remove('green', 'yellow', 'red');
+                cell.classList.add(selectedColor);
+            }
+        }
+
+        function setColor(color) {
+            selectedColor = color;
+        }
+    </script>
+</body>
+</html>

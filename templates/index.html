@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Diário da Saúde Mental</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF9E5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #FFCC00;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1 {
+    color: #FFCC00;
+    margin-top: 20px;
+}
+
+.login-container {
+    background-color: #FFF5CC;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+h2 {
+    color: #FF9900;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    color: #FF9900;  /* Corrigido: removido um # */
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #FF9900;
+}
+
+button {
+    background-color: #FFB300;  /* Corrigido: adicionado ponto e vírgula */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FF9900;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.input-group label input[type="checkbox"] {
+    border-radius: 0px;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    color: #FF9900;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FF7F00;
+}
+    </style>
+</head>
+
+<body>
+    <h1>Diário da Saúde Mental</h1>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form" action="/login/" method="post">
+            <div class="input-group">
+                <label for="username">Nome de usuário</label>
+                <input type="text" name="username" id="username" placeholder="Digite o nome de usuário" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" name="password" id="password" placeholder="Digite a senha" required>
+            </div>
+            <div class="input-group">
+                <label for="remember-me">
+                    <input type="checkbox" id="remember-me" name="remember-me"> Lembrar-me
+                </label>
+            </div>
+            {% csrf_token %}
+            <button type="submit">Entrar</button>
+            <p><a href="/register/">Criar uma conta</a></p>
+        </form>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

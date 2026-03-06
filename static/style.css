@@ -1,0 +1,141 @@
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff8e1; /* Fundo claro para o body */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fbc02d; /* Fundo amarelo para a tela de login */
+}
+
+.login-box {
+    background-color: #ffeb3b;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #f57f17; /* Cor de texto amarela escura para os títulos */
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    text-align: center;
+}
+.login-entry {
+    margin-bottom: 15px;
+}
+
+.login-entry label {
+    display: block;
+    font-size: 18px;
+    color: #f57f17;
+}
+
+.login-entry input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #fbc02d;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.login-entry input:focus {
+    outline: none;
+    border-color: #f57f17;
+    background-color: #fffde7;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #f57f17;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #f9a825;
+}
+
+.months-container {
+    display: none;
+    padding: 20px;
+}
+
+.month {
+    background-color: #ffeb3b;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    border: 2px solid #fbc02d;
+}
+
+.entry {
+    margin-bottom: 15px;
+    background-color: #fff9c4;
+    padding: 10px;
+    border: 1px solid #fdd835;
+    border-radius: 5px;
+}
+
+.entry label {
+    display: block;
+    font-size: 18px;
+    color: #f57f17;
+    margin-bottom: 5px;
+}
+
+.entry input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #fbc02d;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.entry input:focus {
+    outline: none;
+    border-color: #f57f17;
+    background-color: #fffde7;
+}
+

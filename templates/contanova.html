@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFFBCC; 
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .contanova-container {
+            background-color: #FFF2B3; 
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #FF9900;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            color: #FF9900;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #FF9900;
+        }
+
+        button {
+            background-color: #FF9900;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #FF7F00;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        a {
+            color: #FF9900;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #FF7F00; 
+        }
+    </style>
+</head>
+<body>
+    <div class="contanova-container">
+        <h2>Criar Conta</h2>
+        <form id="contanova-form" method="post" action="/register/">
+            {{ form }}
+            {% csrf_token %}
+            <button type="submit">Criar Conta</button>
+        </form>
+        <p><a href="/">Já tem uma conta? Faça login aqui</a></p>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Diário da Saúde Mental - Fevereiro</title>
+    <style>
+        /* Estilo geral da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFF9E5; /* Fundo amarelo pastel */
+            color: #FFCC00; /* Cor do texto em amarelo */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Alinha verticalmente no centro */
+            flex-direction: column;
+            text-align: center; /* Centraliza o texto */
+            height: 100vh;
+        }
+
+        h1 {
+            color: #FF9900; /* Amarelo forte para o título */
+            margin-bottom: 50px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            max-width: 1200px;
+            margin-top: 30px;
+        }
+
+        .month, .calendar {
+            background-color: #FFF5CC; /* Amarelo suave para o fundo de cada mês */
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 48%; /* Ocupa 48% da largura para garantir que fiquem lado a lado */
+            text-align: left; /* Alinha o conteúdo de dentro das caixas à esquerda */
+        }
+
+        h2 {
+            color: #FFB300; /* Amarelo mais forte para o nome do mês */
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .entry {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-size: 16px;
+            color: #FF9900; /* Cor laranja para os rótulos */
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #FFD700; /* Borda amarela */
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #FFB300; /* Laranja quando o campo está em foco */
+        }
+
+        /* Calendário */
+        .calendar {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #FFD700;
+            cursor: pointer; /* Indica que o dia é clicável */
+        }
+
+        th {
+            background-color: #FFB300;
+            color: white;
+        }
+
+        td {
+            background-color: #FFF9E5;
+        }
+
+        .selected {
+            border: 2px solid #FF9900; /* Borda amarela para dias selecionados */
+        }
+
+        /* Estilo do botão */
+        .next-month {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .next-month a {
+            font-size: 18px;
+            color: #FFF;
+            background-color: #FFB300;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .next-month a:hover {
+            background-color: #FF7F00;
+        }
+
+        /* Cores do dia */
+        .green { background-color: #28a745; color: white; }
+        .yellow { background-color: #ffc107; color: white; }
+        .red { background-color: #dc3545; color: white; }
+
+        /* Botões coloridos */
+        button {
+            font-size: 18px;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            width: 150px; /* Aumenta o tamanho dos botões */
+        }
+
+        .green-button {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .yellow-button {
+            background-color: #ffc107;
+            color: white;
+        }
+
+        .red-button {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Diário da Saúde Mental - Fevereiro</h1>
+
+    <div class="container">
+        <!-- Fevereiro -->
+        <div class="month" id="february">
+            <h2>Fevereiro</h2>
+            <div class="entry">
+                <label for="feb-1">Semana 1:</label>
+                <input type="text" id="feb-1" placeholder="Como você se sentiu?">
+            </div>
+            <div class="entry">
+                <label for="feb-2">Semana 2:</label>
+                <input type="text" id="feb-2" placeholder="Como você se sentiu?">
+            </div>
+            <div class="entry">
+                <label for="feb-3">Semana 3:</label>
+                <input type="text" id="feb-3" placeholder="Como você se sentiu?">
+            </div>
+
+            <div class="next-month">
+                <a href="marco.html">Próximo Mês</a>
+            </div>
+        </div>
+
+        <!-- Calendário de Fevereiro -->
+        <div class="calendar">
+            <h3>Calendário de Fevereiro 2025</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Seg</th>
+                        <th>Ter</th>
+                        <th>Qua</th>
+                        <th>Qui</th>
+                        <th>Sex</th>
+                        <th>Sáb</th>
+                        <th>Dom</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td onclick="changeColor(this)">1</td>
+                        <td onclick="changeColor(this)">2</td>
+                        <td onclick="changeColor(this)">3</td>
+                        <td onclick="changeColor(this)">4</td>
+                        <td onclick="changeColor(this)">5</td>
+                        <td onclick="changeColor(this)">6</td>
+                        <td onclick="changeColor(this)">7</td>
+                    </tr>
+                    <tr>
+                        <td onclick="changeColor(this)">8</td>
+                        <td onclick="changeColor(this)">9</td>
+                        <td onclick="changeColor(this)">10</td>
+                        <td onclick="changeColor(this)">11</td>
+                        <td onclick="changeColor(this)">12</td>
+                        <td onclick="changeColor(this)">13</td>
+                        <td onclick="changeColor(this)">14</td>
+                    </tr>
+                    <tr>
+                        <td onclick="changeColor(this)">15</td>
+                        <td onclick="changeColor(this)">16</td>
+                        <td onclick="changeColor(this)">17</td>
+                        <td onclick="changeColor(this)">18</td>
+                        <td onclick="changeColor(this)">19</td>
+                        <td onclick="changeColor(this)">20</td>
+                        <td onclick="changeColor(this)">21</td>
+                    </tr>
+                    <tr>
+                        <td onclick="changeColor(this)">22</td>
+                        <td onclick="changeColor(this)">23</td>
+                        <td onclick="changeColor(this)">24</td>
+                        <td onclick="changeColor(this)">25</td>
+                        <td onclick="changeColor(this)">26</td>
+                        <td onclick="changeColor(this)">27</td>
+                        <td onclick="changeColor(this)">28</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <button class="green-button" onclick="setColor('green')">Verde</button>
+                <button class="yellow-button" onclick="setColor('yellow')">Amarelo</button>
+                <button class="red-button" onclick="setColor('red')">Vermelho</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selectedColor = null;
+
+        function changeColor(cell) {
+            if (selectedColor) {
+                // Limpa a seleção anterior
+                cell.classList.remove('green', 'yellow', 'red');
+                // Adiciona a cor escolhida
+                cell.classList.add(selectedColor);
+            }
+        }
+
+        function setColor(color) {
+            selectedColor = color;
+        }
+    </script>
+</body>
+</html>
