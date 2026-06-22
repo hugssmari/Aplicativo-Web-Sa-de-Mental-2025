@@ -8,6 +8,7 @@ Esta aplicação funciona como um calendário de acompanhamento emocional, permi
 A ideia principal é ajudar no monitoramento do bem-estar mental de forma simples e visual.
 
 📅 Como funciona
+
 O usuário seleciona um dia no calendário e escolhe uma cor que representa seu estado emocional naquele momento:
 
 - 🟢 Verde:indica que o usuário se sentiu bem no dia  
