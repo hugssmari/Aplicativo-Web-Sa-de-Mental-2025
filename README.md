@@ -11,9 +11,10 @@ Este projeto funciona da mesma forma independentemente de como foi obtido: seja 
 
 Se você baixou o projeto em ZIP, extraia o arquivo e abra a pasta no VS Code em "File → Open Folder".
 
-Se você clonou o projeto com Git, use o terminal:
-
+Se você clonou o projeto com Git, use este comando no terminal:
 git clone https://github.com/hugssmari/Aplicativo-Web-Sa-de-Mental-2025.git  
+
+e depois este para localizar o arquivo
 cd Aplicativo-Web-Sa-de-Mental-2025
 
 Depois disso, abra a pasta no VS Code (opcional, mas recomendado).
@@ -22,20 +23,22 @@ Se você já tem a pasta no computador, basta abrir diretamente no VS Code.
 
 
 
- 🧭 ABRINDO O TERMINAL
+AVISO: Todos os comandos podem ser executados em qualquer terminal (VS Code, PowerShell, CMD ou Terminal do Mac/Linux), desde que o usuário esteja dentro da pasta do projeto e com o ambiente virtual ativado.
 
+
+
+🧭 ABRINDO O TERMINAL
 No VS Code, clique em "Terminal → New Terminal".  
 Certifique-se de que o terminal está dentro da pasta do projeto.
 
 
-
- 🐍 CRIANDO O AMBIENTE VIRTUAL (OBRIGATÓRIO)
+🐍 CRIANDO O AMBIENTE VIRTUAL (OBRIGATÓRIO)
+Digite este código no terminal do projeto
 
 python -m venv venv
 
-
-
 ▶️ ATIVANDO O AMBIENTE VIRTUAL
+ative o ambiente virtual no terminal do vs code dentro da pasta do projeto ou no powershell, cmd, terminal mac/Linux
 
 No Windows:
 
@@ -55,7 +58,6 @@ Este projeto não utiliza requirements.txt, então o Django deve ser instalado m
 pip install django
 
 
-
 🗄️ MIGRAÇÕES DO BANCO DE DADOS
 
 python manage.py migrate
@@ -65,7 +67,6 @@ python manage.py migrate
 
 python manage.py runserver
 
----
 
 🌐 ACESSANDO O PROJETO
 
