@@ -1,8 +1,27 @@
 🧠 Aplicativo Web de Saúde Mental
 
-Este projeto é uma aplicação web desenvolvida com Django, com foco em estudo e prática de desenvolvimento web. Ele permite rodar um sistema completo localmente no computador.
+Este projeto é uma aplicação web desenvolvida com Django, com foco em estudo e prática de desenvolvimento web. Ele permite rodar um sistema completo localmente 
 
- 🚀 COMO RODAR O PROJETO
+🧠 Sobre a aplicação
+
+Esta aplicação funciona como um calendário de acompanhamento emocional, permitindo que o usuário registre como se sente ao longo dos dias, semanas e meses.
+A ideia principal é ajudar no monitoramento do bem-estar mental de forma simples e visual.
+
+📅 Como funciona
+O usuário seleciona um dia no calendário e escolhe uma cor que representa seu estado emocional naquele momento:
+
+- 🟢 Verde:indica que o usuário se sentiu bem no dia  
+- 🟡 Amarelo:indica que o usuário não esteve tão bem, mas também não esteve mal  
+- 🔴 Vermelho:indica que o usuário se sentiu mal  
+
+✍️ Registro semanal
+Além da marcação diária, o usuário pode escrever um breve resumo semanal, registrando como se sentiu ao longo dos dias e observando sua evolução emocional.
+
+📊 Objetivo
+O objetivo da aplicação é permitir um acompanhamento visual e textual do bem-estar emocional, ajudando o usuário a identificar padrões e refletir sobre sua saúde mental ao longo do tempo.
+
+
+🚀 COMO RODAR O PROJETO
 
 Este projeto funciona da mesma forma independentemente de como foi obtido: seja por Git Clone, download em ZIP ou abertura direta da pasta no VS Code. O processo final para execução é sempre o mesmo.
 
