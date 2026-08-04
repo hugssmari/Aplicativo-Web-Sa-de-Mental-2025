@@ -66,7 +66,7 @@ venv\Scripts\activate
 
 No Mac/Linux:
 
-source venv/bin/activate
+.source venv/bin/activate
 
 Se funcionar corretamente, aparecerá (venv) no início da linha do terminal.
 
